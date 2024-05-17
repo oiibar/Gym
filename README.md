@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://socialify.git.ci/oiibar/Gym/image?language=1&amp;name=1&amp;owner=1&amp;pattern=Solid&amp;theme=Light" alt="project-image"></p>
 
-<p id="description">This is an user-friendly simple application to keep track of your workout/exercises</p>
+<p id="description">This is an user-friendly simple application to keep track of your workout/exercises. I decided to build this project to have my personal app to keep track of my workout.</p>
 
   
   
@@ -11,6 +11,9 @@
 Here're some of the project's best features:
 
 *   CRUD operations
+*   Save exercises:
+*   Weight, sets x reps, title, type
+*   Group exercises by muscle groups
 
 <h2>🛠️ Installation Steps:</h2>
 
@@ -61,9 +64,11 @@ npm run dev
 
 Technologies used in the project:
 
-*   ReactJS
 *   MongoDB
-*   CRUD-api
+*   ExpressJS
+*   ReactJS
+*   NodeJS
+*   CRUD operations
 *   TailwindCSS
 
 
