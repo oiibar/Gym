@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://socialify.git.ci/oiibar/Gym/image?language=1&amp;name=1&amp;owner=1&amp;pattern=Solid&amp;theme=Light" alt="project-image"></p>
 
-<p id="description">This is an user-friendly simple applicatino to keep track of your workout/exercises</p>
+<p id="description">This is an user-friendly simple application to keep track of your workout/exercises</p>
 
   
   
