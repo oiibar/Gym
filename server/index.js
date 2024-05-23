@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://gym-server-seven.vercel.app/"],
+    origin: [""],
     methods: ["POST", "GET", "DELETE"],
     credentials: true,
   })
