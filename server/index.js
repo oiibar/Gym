@@ -23,10 +23,10 @@ app.use((req, res, next) => {
 app.use("/api/workouts", workoutRoutes);
 
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect('mongodb+srv://aibar:admin123@gym.hog70wj.mongodb.net/?retryWrites=true&w=majority&appName=Gym')
   .then(() => {
-    app.listen(process.env.PORT, () => {
-      console.log(`Listening on port ${process.env.PORT}`);
+    app.listen(5000, () => {
+      console.log(`Listening on port 5000`);
     });
   })
   .catch((err) => {
