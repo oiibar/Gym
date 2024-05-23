@@ -3,6 +3,7 @@ import { router } from "./router/router";
 import { WorkoutsContextProvider } from "./context/workout.context.jsx";
 
 function App() {
+  axios.defaults.withCredentials = true;
   return (
     <WorkoutsContextProvider>
       <RouterProvider router={router} />
