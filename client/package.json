@@ -1,5 +1,5 @@
 {
-  "proxy": "https://gym-server-seven.vercel.app/",
+  "proxy": "https://gym-server-seven.vercel.app",
   "name": "client",
   "private": true,
   "version": "0.0.0",
