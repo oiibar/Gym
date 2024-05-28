@@ -8,7 +8,10 @@ const Home = () => {
 
   useEffect(() => {
     const fetchWorkouts = async () => {
-      const response = await fetch("/api/workouts");
+      const response = await fetch("https://gym-backend-esdn.onrender.com/api/workouts", {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+      });
       const data = await response.json();
 
       if (response.ok) {
