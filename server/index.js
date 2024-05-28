@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://gym-frontend-cxsp.onrender.com"],
+    origin: ["https://gym-cli.onrender.com"],
     credentials: true,
     optionsSuccessStatus: 200,
   })
