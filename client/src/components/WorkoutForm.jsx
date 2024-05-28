@@ -15,7 +15,7 @@ const WorkoutForm = () => {
     e.preventDefault();
 
     const workout = { title, sets, reps, type, weight };
-    const response = await fetch("/api/workouts", {
+    const response = await fetch("https://gym-serv.onrender.com/api/workouts", {
       method: "POST",
       body: JSON.stringify(workout),
       headers: {
