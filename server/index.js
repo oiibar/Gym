@@ -9,9 +9,9 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://gym-server-seven.vercel.app"],
-    methods: ["POST", "GET", "DELETE"],
+    origin: ["https://gym-frontend-cxsp.onrender.com"],
     credentials: true,
+    optionsSuccessStatus: 200,
   })
 );
 
@@ -23,7 +23,9 @@ app.use((req, res, next) => {
 app.use("/api/workouts", workoutRoutes);
 
 mongoose
-  .connect('mongodb+srv://aibar:admin123@gym.hog70wj.mongodb.net/?retryWrites=true&w=majority&appName=Gym')
+  .connect(
+    "mongodb+srv://aibar:admin123@gym.hog70wj.mongodb.net/?retryWrites=true&w=majority&appName=Gym"
+  )
   .then(() => {
     app.listen(5000, () => {
       console.log(`Listening on port 5000`);
