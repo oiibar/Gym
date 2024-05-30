@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
+import { useAuthContext } from "../hooks/useAuthContext";
 
 const WorkoutForm = () => {
   const { dispatch } = useWorkoutsContext();
@@ -10,9 +11,15 @@ const WorkoutForm = () => {
   const [reps, setReps] = useState("");
   const [err, setErr] = useState(null);
   const [emptyFields, setEmptyFields] = useState([]);
+  const { user } = useAuthContext();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!user) {
+      setErr("Login in first");
+      return;
+    }
 
     const workout = { title, sets, reps, type, weight };
     const response = await fetch("https://gym-serv.onrender.com/api/workouts", {
@@ -20,6 +27,7 @@ const WorkoutForm = () => {
       body: JSON.stringify(workout),
       headers: {
         "Content-Type": "application/json",
+        Authorization: `Bearer ${user.token}`,
       },
     });
 

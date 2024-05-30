@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLogin } from "../hooks/useLogin";
+import { Navigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -31,7 +32,11 @@ const Login = () => {
           className="input"
           placeholder="Password"
         />
-        <button disabled={isLoading} className="btn btn-green mx-auto">
+        <button
+          disabled={isLoading}
+          onClick={Navigate("/signup")}
+          className="btn btn-green mx-auto"
+        >
           Submit
         </button>
         {error && <div>{error}</div>}
