@@ -2,10 +2,11 @@ import React from "react";
 import { formatDate } from "./../helpers/date.helper";
 import { FaTrash } from "react-icons/fa";
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
+import { useAuthContext } from "../hooks/useAuthContext"; // Ensure to import this
 
 const Workout = ({ workout }) => {
   const { dispatch } = useWorkoutsContext();
-  const { user } = useWorkoutsContext;
+  const { user } = useAuthContext(); // Use useAuthContext to get the user
 
   const handleDelete = async () => {
     if (!user) {
@@ -22,8 +23,12 @@ const Workout = ({ workout }) => {
         },
       }
     );
+
     const data = await response.json();
-    if (response.ok) {
+
+    if (!response.ok) {
+      console.error(data.error);
+    } else {
       dispatch({ type: "DELETE_WORKOUT", payload: data });
     }
   };
