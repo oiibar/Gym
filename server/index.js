@@ -5,7 +5,13 @@ import userRoutes from "./routes/user.routes.js";
 import mongoose from "mongoose";
 import cors from "cors";
 
-//https://gym-cli.onrender.com
+/*
+{
+    origin: ["https://gym-cli.onrender.com"],
+    credentials: true,
+    optionsSuccessStatus: 200,
+  }
+*/
 
 dotenv.config();
 const app = express();

@@ -14,7 +14,7 @@ export const useSignup = () => {
       "https://gym-serv.onrender.com/api/user/signup",
       {
         method: "POST",
-        headers: { "Context-Type": "application/json" },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
       }
     );
