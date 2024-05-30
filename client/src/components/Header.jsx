@@ -1,14 +1,14 @@
 import { FaDumbbell } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import { useLogout } from "../hooks/useLogout.jsx";
+//import { useLogout } from "../hooks/useLogout.jsx";
 import { useAuthContext } from "../hooks/useAuthContext.jsx";
 
 const Header = () => {
-  const { logout } = useLogout();
+  //const { logout } = useLogout();
   const { user } = useAuthContext();
 
   const handleLogout = () => {
-    logout();
+    //logout();
   };
 
   return (
