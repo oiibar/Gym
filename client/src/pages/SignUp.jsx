@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useSignup } from "../hooks/useSignup";
 
 const SignUp = () => {
@@ -9,6 +10,7 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await signup(email, password);
+    navigate("/");
   };
 
   return (
