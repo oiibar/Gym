@@ -35,7 +35,7 @@ userSchema.statics.signup = async function (email, password) {
 };
 
 userSchema.statics.login = async function (email, password) {
-  if (!email || !password) {
+  if (!email && !password) {
     throw Error("Email or password is missing");
   }
   const user = await this.findOne({ email });
