@@ -5,6 +5,8 @@ import userRoutes from "./routes/user.routes.js";
 import mongoose from "mongoose";
 import cors from "cors";
 
+//https://gym-cli.onrender.com
+
 dotenv.config();
 const app = express();
 app.use(express.json());

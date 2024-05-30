@@ -9,6 +9,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(email, password);
     await login(email, password);
   };
 
@@ -34,7 +35,7 @@ const Login = () => {
         />
         <button
           disabled={isLoading}
-          onClick={Navigate("/signup")}
+          onClick={Navigate("/")}
           className="btn btn-green mx-auto"
         >
           Submit
