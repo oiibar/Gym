@@ -3,13 +3,13 @@ const { jwt } = pkg;
 import User from "../models/user.model.js";
 
 export const Auth = async (req, res, next) => {
-  const { authorization } = req.headers;
+  const { Authorization } = req.headers;
 
-  if (!authorization) {
+  if (!Authorization) {
     return res.status(401).json({ error: "Missing authorization token" });
   }
 
-  const token = authorization.split(" ")[1];
+  const token = Authorization.split(" ")[1];
 
   try {
     const { _id } = jwt.verify(token, process.env.JWT_SECRET);
