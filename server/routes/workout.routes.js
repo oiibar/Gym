@@ -1,9 +1,12 @@
 import express from "express";
 import controllers from "../controllers/workout.controller.js";
+import { Auth } from "../middleware/Auth.js";
 const { createWorkout, getWorkouts, getWorkout, deleteWorkout, updateWorkout } =
   controllers;
 
 const router = express.Router();
+
+router.use(Auth);
 
 router.get("/", getWorkouts);
 
