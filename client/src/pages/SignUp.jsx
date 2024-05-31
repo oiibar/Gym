@@ -45,4 +45,4 @@ const SignUp = () => {
   );
 };
 
-export default Si;
+export default SignUp;
