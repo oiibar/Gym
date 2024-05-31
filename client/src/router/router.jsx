@@ -21,22 +21,10 @@ export const router = createBrowserRouter([
     path: "/login",
     element: <Login />,
     errorElement: <ErrorPage />,
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-    ],
   },
   {
     path: "/signup",
     element: <SignUp />,
     errorElement: <ErrorPage />,
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-    ],
   },
 ]);
