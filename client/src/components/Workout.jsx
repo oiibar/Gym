@@ -2,11 +2,11 @@ import React from "react";
 import { formatDate } from "./../helpers/date.helper";
 import { FaTrash } from "react-icons/fa";
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
-import { useAuthContext } from "../hooks/useAuthContext"; // Ensure to import this
+import { useAuthContext } from "../hooks/useAuthContext";
 
 const Workout = ({ workout }) => {
   const { dispatch } = useWorkoutsContext();
-  const { user } = useAuthContext(); // Use useAuthContext to get the user
+  const { user } = useAuthContext();
 
   const handleDelete = async () => {
     if (!user) {

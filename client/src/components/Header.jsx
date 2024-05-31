@@ -1,7 +1,7 @@
 import { FaDumbbell } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import { useLogout } from "../hooks/useLogout.jsx";
-import { useAuthContext } from "../hooks/useAuthContext.jsx";
+import { useLogout } from "../hooks/useLogout.js";
+import { useAuthContext } from "../hooks/useAuthContext.js";
 
 const Header = () => {
   const { logout } = useLogout();
@@ -16,9 +16,9 @@ const Header = () => {
       <Link to="/">
         <FaDumbbell size={20} />
       </Link>
-      <nav>
+      <nav className="flex gap-2">
         {user && (
-          <div>
+          <div className="flex gap-2">
             <span>{user.email}</span>
             <button onClick={handleLogout}>Log Out</button>
           </div>

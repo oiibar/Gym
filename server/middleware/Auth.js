@@ -1,8 +1,8 @@
-import jwt from "jsonwebtoken"; // Fix the import statement
+import jwt from "jsonwebtoken";
 import User from "../models/user.model.js";
 
 export const Auth = async (req, res, next) => {
-  const authorization = req.headers.authorization; // Changed from destructuring
+  const { authorization } = req.headers;
 
   if (!authorization) {
     return res.status(401).json({ error: "Missing authorization token" });
@@ -11,11 +11,11 @@ export const Auth = async (req, res, next) => {
   const token = authorization.split(" ")[1];
 
   try {
-    const { _id } = jwt.verify(token, process.env.JWT_SECRET);
+    const { _id } = jwt.verify(token, "secretus");
     req.user = await User.findOne({ _id }).select("_id");
     next();
   } catch (error) {
     console.log(error);
-    res.status(401).json({ error: "Not authorized" }); // Changed status code to 401
+    res.status(401).json({ error: "Not authorized" });
   }
 };
