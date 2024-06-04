@@ -33,7 +33,7 @@ const Home = () => {
   }, [dispatch, user]);
 
   return (
-    <div className="flex flex-col gap-20 items-center justify-center text-center">
+    <div className="flex flex-col gap-20 items-center justify-center text-center p-2">
       <WorkoutForm />
       <div className="workouts">
         {workouts &&
