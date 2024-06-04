@@ -28,7 +28,7 @@
     @apply flex flex-wrap items-center text-center justify-center gap-4 w-full;
   }
   .workout {
-    @apply flex flex-col w-1/4 gap-2 p-4 bg-slate-800 rounded-md;
+    @apply flex flex-col w-1/4 md:w-full gap-2 p-4 bg-slate-800 rounded-md;
   }
 }
 
